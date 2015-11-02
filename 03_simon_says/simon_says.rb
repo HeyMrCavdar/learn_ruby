@@ -29,23 +29,21 @@ string.split(' ')[0]
 end
 
 def titleize(string) #create an array of all words don't want to capitalize, use .map
-output = string.split(' ').map do |word|
-	if #this word is and/or/of do not capitalize
-		word.capitalize
-	end
-	output.join(" ")
+	string.capitalize!
+	badwords = ["of", "and" , "over", "the"]
+	output = string.split(' ').map { |word|
+		if badwords.include?(word)
+			word
+		#this word is and/or/of do not capitalize
+		else
+			word.capitalize
+			#capitalize everything else
+		end
+		}.join(" ")
+
 end
 
 
-
-
-# def repeat(text, num = 1)
-# 	output =[]
-# 	num.times do
-# 		output.push(text)
-# 	end
-# 	output.join(" ")
-# end
 
 
 
