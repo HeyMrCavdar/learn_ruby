@@ -24,7 +24,8 @@ def start_of_word(string, num = 1)
 	# output.join
 end
 
-def first_word(word)
+def first_word(string)
+string.split(' ')[0]
 end
 
 def titleize(word) #create an array of all words don't want to capitalize, use .map
