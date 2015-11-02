@@ -28,8 +28,12 @@ def first_word(string)
 string.split(' ')[0]
 end
 
-def titleize(word) #create an array of all words don't want to capitalize, use .map
-word.capitalize
+def titleize(string) #create an array of all words don't want to capitalize, use .map
+output = string.split(' ').map do |word|
+	if #this word is and/or/of do not capitalize
+		word.capitalize
+	end
+	output.join(" ")
 end
 
 
